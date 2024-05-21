@@ -1,0 +1,20 @@
+  {
+    "manifest_version": 2,
+    "name": "ScanIt",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "http://127.0.0.1:5000/predict",
+      "storage",
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
