@@ -38,7 +38,10 @@ document.getElementById('classifyBtn').addEventListener('click', function() {
 
                         resultDiv.textContent = `Result: ${prediction.result} (Malicious Percentage: ${maliciousPercentage})`;
                         
-                        if (result.includes('safe')) {
+                        if ((result.includes('safe') && result.includes('but')) || 
+                            (result.includes('suspicious') && result.includes('but'))) {
+                            resultDiv.style.color = 'orange';
+                        } else if (result.includes('safe')) {
                             resultDiv.style.color = 'green';
                         } else if (result.includes('suspicious')) {
                             resultDiv.style.color = 'red';
