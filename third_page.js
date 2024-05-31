@@ -35,17 +35,19 @@ document.getElementById('classifyBtn').addEventListener('click', function() {
                         const prediction = data.predictions[0];
                         const result = prediction.result.toLowerCase(); // Convert to lowercase for case-insensitive comparison
                         const maliciousPercentage = prediction['malicious percentage'];
-                    
+
                         resultDiv.textContent = `Result: ${prediction.result} (Malicious Percentage: ${maliciousPercentage})`;
-                    
+                        
                         if (result.includes('safe')) {
                             resultDiv.style.color = 'green';
-                        } else if (result.includes('malicious')) {
+                        } else if (result.includes('suspicious')) {
                             resultDiv.style.color = 'red';
                         }
+
+                        document.getElementById('feedbackSection').style.display = 'block';
                     } else {
                         resultDiv.textContent = 'Error: Unable to classify the URL';
-                    }
+                    }  
                 })
                 .catch(error => {
                     console.error('Error:', error);

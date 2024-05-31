@@ -133,7 +133,19 @@
       <button id="classifyBtn">Classify URL</button>
       <div id="result"></div>
     </div>
+
+    <div id="feedbackSection" style="display: none; margin-top: 20px;">
+        <p>Was this prediction correct?</p>
+        <input type="radio" id="feedbackYes" name="feedback" value="yes">
+        <label for="feedbackYes">Yes</label><br>
+        <input type="radio" id="feedbackNo" name="feedback" value="no">
+        <label for="feedbackNo">No</label><br>
+        <button id="feedbackBtn">Submit Feedback</button>
+        <div id="feedbackSaved"></div> 
+    </div>
+
     <script src="third_page.js"></script>
+    <script src="feedback.js"></script>
     <a href="settings.html" id="setting">⚙️</a>
 </body>
 </html>
