@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.error(err);
                         loadingText.style.display = 'none';
                     });
-            }, 60000);
+            }, 120000);
         }
     });
 });
